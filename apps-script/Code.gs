@@ -1,7 +1,8 @@
 // Steal the Beat member sign-ups -> Google Sheet "Steal the Beat Members"
-// Bound to the Sheet (Extensions > Apps Script). Deployed as a web app:
+// Standalone Apps Script project, writes to the Sheet by ID. Deployed as a web app:
 // Execute as: Me, Who has access: Anyone. The /exec URL goes in assets/form.js.
 
+const SHEET_ID = "1GpsyrWOqYSDJfre9BNcqvigB-xgCLpHKe6zs8MuqjHA";
 const SHEET_NAME = "Members";
 const FIELDS = [
   ["timestamp", "Signed up"], ["name", "Full name"], ["alias", "Alias"],
@@ -14,7 +15,7 @@ const FIELDS = [
 ];
 
 function getSheet() {
-  const ss = SpreadsheetApp.getActiveSpreadsheet();
+  const ss = SpreadsheetApp.openById(SHEET_ID);
   let sheet = ss.getSheetByName(SHEET_NAME);
   if (!sheet) {
     sheet = ss.getSheets()[0];
