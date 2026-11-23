@@ -1,5 +1,5 @@
-// Paste the Google Apps Script web app URL here (see apps-script/README).
-const ENDPOINT = "PASTE_APPS_SCRIPT_URL_HERE";
+// Google Apps Script web app (source: apps-script/Code.gs). Re-deploy as a new version after editing.
+const ENDPOINT = "https://script.google.com/macros/s/AKfycbyhQj5wXqlxlfM4xf-IMTzBgtQ_giW1O3TVDKwDrdHmuvni0a01yJSOt6nScj1o3BgD/exec";
 
 const form = document.getElementById("join");
 const msg = document.getElementById("msg");
