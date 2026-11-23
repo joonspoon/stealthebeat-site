@@ -19,6 +19,8 @@ Owners: June Clarke (joonspoon) and Blayke. Started November 2026.
 
 No build step. Edit the files, commit to `main`, and GitHub Pages redeploys in a minute or two.
 
+When you change `style.css` or `form.js`, bump the `?v=` number where the HTML pages link to them, so browsers fetch the new file instead of a cached one.
+
 ## Hosting and domain
 
 - **GitHub Pages:** repo Settings → Pages, source `main` / root, custom domain `stealthebeat.ng`, Enforce HTTPS on.
