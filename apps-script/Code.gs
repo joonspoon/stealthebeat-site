@@ -4,6 +4,7 @@
 
 const SHEET_ID = "1GpsyrWOqYSDJfre9BNcqvigB-xgCLpHKe6zs8MuqjHA";
 const SHEET_NAME = "Members";
+const NOTIFY_EMAIL = "beat@blayke.ng";
 const FIELDS = [
   ["timestamp", "Signed up"], ["name", "Full name"], ["alias", "Alias"],
   ["instagram", "IG handle"], ["city", "City"], ["pieces", "Pieces owned"],
@@ -37,6 +38,7 @@ function doPost(e) {
     data.timestamp = new Date();
     if (data.whatsapp) data.whatsapp = "'" + data.whatsapp; // keep the + sign
     getSheet().appendRow(FIELDS.map((f) => (data[f[0]] !== undefined ? data[f[0]] : "")));
+    notify(data);
     return json({ ok: true });
   } catch (err) {
     return json({ ok: false, error: String(err) });
@@ -47,8 +49,28 @@ function doGet() {
   return json({ ok: true, msg: "STB sign-up endpoint is live." });
 }
 
+// Email a short summary of each new sign-up. A failed email never blocks the save.
+function notify(data) {
+  try {
+    const who = data.name + (data.alias ? " (" + data.alias + ")" : "");
+    const lines = FIELDS
+      .filter((f) => f[0] !== "page" && data[f[0]])
+      .map((f) => f[1] + ": " + String(data[f[0]]).replace(/^'/, ""));
+    MailApp.sendEmail({
+      to: NOTIFY_EMAIL,
+      subject: "New STB member: " + who,
+      body: lines.join("\n") + "\n\nAll sign-ups: https://docs.google.com/spreadsheets/d/" + SHEET_ID + "/edit",
+      name: "Steal the Beat"
+    });
+  } catch (err) {
+    console.error("notify failed: " + err);
+  }
+}
+
+// Run once from the editor after changes that need new permissions.
 function setup() {
   getSheet();
+  MailApp.getRemainingDailyQuota();
 }
 
 function json(obj) {

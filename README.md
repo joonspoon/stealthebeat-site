@@ -55,5 +55,5 @@ The form posts JSON as plain text (no CORS preflight) to the web app. `doPost` c
 ## Copy and design notes
 
 - Minimal, plain wording. No hype.
-- Footer on every page: "✂️ Handmade in Lagos, Nigeria" and @stealdbeat.
+- Footer on every page: "✂️ Handmade in Lagos" and @stealdbeat.
 - The official logo has no "by blayke" byline.
