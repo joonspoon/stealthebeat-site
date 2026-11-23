@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Join | Steal the Beat</title>
+<meta name="description" content="Steal the Beat member sign-up.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@125,800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+<link rel="icon" href="assets/favicon.png">
+</head>
+<body class="asphalt">
+
+<header class="top">
+  <a class="wordmark" href="./"><img src="assets/logo-mark.png" alt="Steal the Beat"></a>
+  <nav>
+    <a href="join.html" aria-current="page">Join</a>
+    <a href="https://stealthebeat.africa">Shop</a>
+  </nav>
+</header>
+
+<main>
+<div class="wrap">
+
+  <div id="intro">
+    <h1>Members</h1>
+    <p class="lede">Steal the Beat members own a piece. If you do, sign up here. Members get first access to events, drops and invites.</p>
+  </div>
+
+  <form id="join" novalidate>
+
+    <fieldset>
+      <legend>You</legend>
+
+      <div class="field">
+        <label for="name">Full name</label>
+        <input id="name" name="name" type="text" autocomplete="name" required>
+      </div>
+
+      <div class="field">
+        <label for="alias">Alias <span class="opt">optional</span></label>
+        <input id="alias" name="alias" type="text" placeholder="Dance name, nickname">
+      </div>
+
+      <div class="field">
+        <label for="instagram">IG handle</label>
+        <input id="instagram" name="instagram" type="text" placeholder="@handle" autocapitalize="off" autocorrect="off" required>
+      </div>
+
+      <div class="field">
+        <label for="city">City</label>
+        <input id="city" name="city" type="text" placeholder="Lagos" autocomplete="address-level2" required>
+      </div>
+    </fieldset>
+
+    <fieldset>
+      <legend>Your piece</legend>
+
+      <div class="field">
+        <span class="label">What do you own?</span>
+        <div class="chips" id="pieces">
+          <label><input type="checkbox" name="pieces" value="T-shirt"><span>T-shirt</span></label>
+          <label><input type="checkbox" name="pieces" value="Hoodie"><span>Hoodie</span></label>
+          <label><input type="checkbox" name="pieces" value="Cap"><span>Cap</span></label>
+          <label><input type="checkbox" name="pieces" value="Joggers"><span>Joggers</span></label>
+          <label><input type="checkbox" name="pieces" value="Other" data-other="pieces_other"><span>Other</span></label>
+        </div>
+        <input class="other-input" id="pieces_other" name="pieces_other" type="text" placeholder="What is it?">
+      </div>
+
+      <div class="field">
+        <label for="got_when">When did you get it?</label>
+          <input id="got_when" name="got_when" type="month" required>
+          <p class="hint">Roughly is fine.</p>
+      </div>
+
+      <div class="field">
+        <label for="size">Your size <span class="opt">optional</span></label>
+        <select id="size" name="size">
+          <option value="" selected>Choose</option>
+          <option>XS</option><option>S</option><option>M</option><option>L</option><option>XL</option><option>XXL</option>
+        </select>
+        <p class="hint">So we know what to make more of.</p>
+      </div>
+    </fieldset>
+
+    <fieldset>
+      <legend>Contact</legend>
+
+      <div class="field">
+        <label for="whatsapp">WhatsApp number</label>
+        <input id="whatsapp" name="whatsapp" type="tel" autocomplete="tel" placeholder="+234 801 234 5678" required>
+        <p class="hint">Include the country code.</p>
+      </div>
+
+      <div class="field">
+        <label class="check"><input type="checkbox" name="ok_whatsapp" value="yes" required>
+          Add me to the Steal the Beat WhatsApp broadcast. Event and drop announcements only.</label>
+      </div>
+
+      <div class="field">
+        <label for="email">Email <span class="opt">optional</span></label>
+        <input id="email" name="email" type="email" autocomplete="email">
+        <p class="hint">WhatsApp is for quick updates. Email is for the things you need to keep: invites, tickets and member-only links. We don't share it and we don't send much.</p>
+      </div>
+
+      <div class="field">
+        <label class="check"><input type="checkbox" name="ok_email" value="yes">
+          Email me about events and drops. You can unsubscribe any time.</label>
+      </div>
+    </fieldset>
+
+    <fieldset>
+      <legend>More</legend>
+
+      <div class="field">
+        <span class="label">Which future community events would you be into? <span class="opt">optional</span></span>
+        <div class="chips">
+          <label><input type="checkbox" name="into" value="Dance"><span>Dance</span></label>
+          <label><input type="checkbox" name="into" value="Music / DJ nights"><span>Music / DJ nights</span></label>
+          <label><input type="checkbox" name="into" value="Basketball"><span>Basketball</span></label>
+          <label><input type="checkbox" name="into" value="Graffiti"><span>Graffiti</span></label>
+          <label><input type="checkbox" name="into" value="Fashion pop-ups"><span>Fashion pop-ups</span></label>
+          <label><input type="checkbox" name="into" value="Photo / film"><span>Photo / film</span></label>
+        </div>
+      </div>
+
+      <div class="field">
+        <label for="heard">How did you find Steal the Beat? <span class="opt">optional</span></label>
+        <input id="heard" name="heard" type="text">
+      </div>
+
+      <div class="field">
+        <span class="label">Can you make the Soirée, Sun 13 Dec?</span>
+        <div class="chips">
+          <label><input type="radio" name="soiree" value="Yes" required><span>Yes</span></label>
+          <label><input type="radio" name="soiree" value="Maybe"><span>Maybe</span></label>
+          <label><input type="radio" name="soiree" value="No"><span>No</span></label>
+        </div>
+      </div>
+
+      <div class="field">
+        <label for="notes">Anything else <span class="opt">optional</span></label>
+        <textarea id="notes" name="notes"></textarea>
+      </div>
+    </fieldset>
+
+    <!-- spam trap: real people never see or fill this -->
+    <div class="hp" aria-hidden="true">
+      <label for="website">Website</label>
+      <input id="website" name="website" type="text" tabindex="-1" autocomplete="off">
+    </div>
+
+    <div class="submit-row">
+      <button class="btn" type="submit" id="submit">Sign up</button>
+      <p class="form-msg" id="msg" role="status" aria-live="polite"></p>
+    </div>
+  </form>
+
+  <div class="done" id="done">
+    <h1>You're in.</h1>
+    <p class="lede">We'll be in touch on WhatsApp.</p>
+  </div>
+
+</div>
+</main>
+
+<footer>
+  <span>Steal the Beat · Lagos</span>
+  <a href="https://stealthebeat.africa">stealthebeat.africa</a>
+</footer>
+
+<script src="assets/form.js"></script>
+</body>
+</html>
