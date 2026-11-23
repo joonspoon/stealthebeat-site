@@ -4,7 +4,7 @@
 
 const SHEET_ID = "1GpsyrWOqYSDJfre9BNcqvigB-xgCLpHKe6zs8MuqjHA";
 const SHEET_NAME = "Members";
-const NOTIFY_EMAIL = "beat@blayke.ng";
+const NOTIFY_EMAIL = "hello@blayke.ng";
 const FIELDS = [
   ["timestamp", "Signed up"], ["name", "Full name"], ["alias", "Alias"],
   ["instagram", "IG handle"], ["city", "City"], ["pieces", "Pieces owned"],
