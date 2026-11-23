@@ -6,7 +6,7 @@
 const SHEET_NAME = "Members";
 const COLUMNS = [
   "timestamp", "name", "alias", "instagram", "city",
-  "pieces", "pieces_other", "got_when", "size",
+  "pieces", "pieces_other", "got_when",
   "whatsapp", "ok_whatsapp", "email", "ok_email",
   "into", "heard", "soiree", "notes", "page"
 ];
