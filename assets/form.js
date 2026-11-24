@@ -28,7 +28,6 @@ function problem() {
   if (!d.name) return "Add your name.";
   if (!d.instagram) return "Add your IG handle.";
   if (!d.city) return "Add your city.";
-  if (!d.pieces) return "Tell us which piece you own.";
   if (!d.whatsapp || d.whatsapp.replace(/\D/g, "").length < 10) return "Add your WhatsApp number with country code.";
   if (!d.ok_whatsapp) return "Tick the WhatsApp box so we can reach you.";
   if (d.email && !/^\S+@\S+\.\S+$/.test(d.email)) return "That email doesn't look right.";
