@@ -9,7 +9,7 @@ Owners: June Clarke (joonspoon) and Blayke. Started November 2026.
 | Path | What it is |
 |---|---|
 | `index.html` | Front page: logo, Members sign up and Shop buttons |
-| `join.html` | Member sign-up form (people who own a piece of STB clothing) |
+| `join.html` | Member sign-up form (open to anyone interested in the brand) |
 | `shop.html` | Placeholder for the Shopify store embed. Not linked yet: Shop links go straight to stealthebeat.africa |
 | `assets/style.css` | All styling. Black background with an asphalt grain (remove `class="asphalt"` from `<body>` for plain black) |
 | `assets/form.js` | Form validation and submission. `ENDPOINT` holds the Apps Script web app URL |
