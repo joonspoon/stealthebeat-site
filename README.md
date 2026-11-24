@@ -10,7 +10,7 @@ Owners: June Clarke (joonspoon) and Blayke. Started November 2026.
 |---|---|
 | `index.html` | Front page: logo, Members sign up and Shop buttons |
 | `join.html` | Member sign-up form (open to anyone interested in the brand) |
-| `shop.html` | Placeholder for the Shopify store embed. Not linked yet: Shop links go straight to stealthebeat.africa |
+| `shop.html` | Placeholder for the Shopify store embed. Not linked yet: Shop links go straight to the Shopify store at https://dfvg3k-th.myshopify.com/ |
 | `assets/style.css` | All styling. Black background with an asphalt grain (remove `class="asphalt"` from `<body>` for plain black) |
 | `assets/form.js` | Form validation and submission. `ENDPOINT` holds the Apps Script web app URL |
 | `assets/logo.png`, `logo-mark.png`, `favicon.png` | Official logo (white, transparent, no "by blayke" byline), header mark, browser tab icon |
@@ -28,7 +28,7 @@ When you change `style.css` or `form.js`, bump the `?v=` number where the HTML p
   - A `@` → 185.199.108.153, 185.199.109.153, 185.199.110.153, 185.199.111.153
   - CNAME `www` → joonspoon.github.io.
   - The domain was parked in ZoneEdit until 23 Nov 2026 and reactivated then. It costs ZoneEdit credits; if credits run out, DNS can be suspended and the site goes down.
-- **Store:** the Shopify store is at **stealthebeat.africa** (separate, locked out as of Nov 2026). To embed it on `shop.html`, use Shopify's Buy Button sales channel; a full store can't be put in an iframe.
+- **Store:** Shop links point to the Shopify store at **https://dfvg3k-th.myshopify.com/** (since 24 Nov 2026). The old store at stealthebeat.africa was locked out as of Nov 2026. To embed it on `shop.html`, use Shopify's Buy Button sales channel; a full store can't be put in an iframe.
 
 ## Sign-up form backend
 
